@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="./assets/images/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#112D57" />
+  <meta name="description" content="Verida MarkDown" />
+  <link rel="apple-touch-icon" href="./assets/images/logo192x192.png" />
+  <title>Open Verida App</title>
+  <style>
+    @font-face {
+      font-family: 'Poppins';
+      src: url('./assets/font/Poppins-SemiBold.ttf') format('truetype');
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Poppins";
+      src: url('./assets/font/Poppins-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-image: url('./assets/images/bgbg_verida.svg');
+      background-size: cover;
+      overflow-x: hidden;
+    }
+
+    .verida-heading {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 130%;
+      text-align: center;
+      letter-spacing: -0.41px;
+      margin: 1.25rem 5.4rem 0 5.4rem;
+      color: #111111;
+    }
+
+    .verida-top-logo {
+      display: inline-block;
+      position: relative;
+      width: 178px;
+      height: 178px;
+      margin: 1.8rem auto 0 auto;
+    }
+
+    .verida-circle-1 {
+      position: absolute;
+      right: 1.1rem;
+      top: 1.7rem;
+    }
+
+    .verida-circle-2 {
+      position: absolute;
+      left: 1.8rem;
+      bottom: 2.8rem;
+    }
+
+    .verida-circle-3 {
+      position: absolute;
+      right: 0.3rem;
+      top: -0.5rem;
+    }
+
+    .verida-top-logo img {
+      padding: auto 2.3rem;
+      margin: 0 auto;
+    }
+
+    .verida-bottom-logo {
+      margin: 0 0 4rem 0;
+    }
+
+    .verida-bottom-logo img {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      right: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0 0 4rem 0;
+    }
+
+    .verida-container {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      flex-flow: column nowrap;
+    }
+
+    .verida-download-buttons {
+      margin: 1.5rem 1.3rem 0 1.3rem;
+    }
+
+    .verida-download-buttons button {
+      padding: 0.75rem 9.1rem;
+      background: #111111;
+      border-radius: 8px;
+      border: none;
+      color: #fff;
+      text-align: center;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @media (min-width:768px) {
+      body {
+        display: none
+      }
+    }
+
+    @media (max-width:360px) {
+      .verida-download-buttons button {
+        padding: 0.3rem 5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="verida-container">
+    <div class="verida-top-logo">
+      <img src="./assets/images/app_icon.svg" alt="verida_logo">
+      <img class="verida-circle-1" src="./assets/images/circlecircle1x.svg" alt="verida_logo-circle1x">
+      <img class="verida-circle-2" src="./assets/images/circlecircle2x.svg" alt="verida_logo-circle2x">
+      <img class="verida-circle-3" src="./assets/images/circlecircle3x.svg" alt="verida_logo-circle3x">
+    </div>
+
+    <h3 class="verida-heading">
+      Open link with Verida app
+    </h3>
+    <div class="verida-download-buttons">
+      <button>
+        open
+      </button>
+    </div>
+    <div class="verida-bottom-logo">
+      <img src="./assets/images/logo_verida_vault.svg" alt="verida_logo">
+    </div>
+  </div>
+</body>
+
+</html>

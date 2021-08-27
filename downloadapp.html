@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="./assets/images/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#112D57" />
+  <meta name="description" content="Verida MarkDown" />
+  <link rel="apple-touch-icon" href="./assets/images/logo192x192.png" />
+  <title>Download Verida App</title>
+  <style>
+    @font-face {
+      font-family: 'Poppins';
+      src: url('./assets/font/Poppins-SemiBold.ttf') format('truetype');
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Poppins";
+      src: url('./assets/font/Poppins-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-image: url('./assets/images/bgbg_verida.svg');
+      background-size: cover;
+      overflow-x: hidden;
+    }
+
+    .verida-heading {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.75rem;
+      line-height: 130%;
+      text-align: center;
+      letter-spacing: -0.41px;
+      color: #111111;
+      margin: 3.8rem 2.3rem 1.5rem 2.3rem;
+    }
+
+    .verida-logo {
+      margin: 1.5rem 8.56rem 0rem 8.56rem;
+    }
+
+    .verida-container {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      flex-flow: column nowrap;
+      margin: auto;
+    }
+
+    .verida-download-buttons>* {
+      padding: 0 0.6rem;
+    }
+
+    .verida-mobile-preview {
+      margin: 4rem 2.4rem 0 2.4rem;
+    }
+
+    @media (min-width:768px) {
+      body {
+        display: none
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="verida-container">
+    <div class="verida-logo">
+      <img src="./assets/images/logo_verida_vault.svg" alt="verida_logo">
+    </div>
+    <h3 class="verida-heading">
+      Download Verida app
+    </h3>
+    <div class="verida-download-buttons">
+      <input type="image" src="./assets/images/google_play.svg" name="google_app" alt="google_app" />
+      <input type="image" src="./assets/images/apple_store.svg" name="google_app" alt="google_app" />
+    </div>
+    <div class="verida-mobile-preview">
+      <img src="./assets/images/iPhone_12_ mini.png" alt="mobile-preview">
+    </div>
+  </div>
+</body>
+
+</html>
