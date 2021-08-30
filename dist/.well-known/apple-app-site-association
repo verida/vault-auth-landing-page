@@ -1,0 +1,17 @@
+{
+   "applinks":{
+      "details":[
+         {
+            "appIDs":[
+               "VV5KCZVD2D.io.verida.vault"
+            ],
+            "components":[
+               {
+                  "/":"/request/*",
+                  "comment":"Single Sign On"
+               }
+            ]
+         }
+      ]
+   }
+}
