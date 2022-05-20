@@ -1,17 +1,22 @@
 {
-   "applinks":{
-      "details":[
-         {
-            "appIDs":[
-               "VV5KCZVD2D.io.verida.vault"
-            ],
-            "components":[
-               {
-                  "/":"/request/*",
-                  "comment":"Single Sign On"
-               }
-            ]
-         }
-      ]
-   }
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "VV5KCZVD2D.io.verida.vault",
+          "VV5KCZVD2D.io.verida.vault.internal"
+        ],
+        "components": [
+          {
+            "/": "/request/*",
+            "comment": "Single Sign On"
+          },
+          {
+            "/": "/connection-success/*",
+            "comment": "Social media connection"
+          }
+        ]
+      }
+    ]
+  }
 }
