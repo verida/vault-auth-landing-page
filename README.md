@@ -1,5 +1,9 @@
 # Landing page for the vault app
 
+## Deployment
+
+This is deployed to AWS Amplify on merge to `main`
+
 ## AWS Amplify Redirects
 
 AWS assumes that files without an extension are folders, so appends a `/` to the end. This means requests for `/.well-known/apple-app-site-association` end up going to `/.well-known/apple-app-site-association/` which is wrong. 
