@@ -1,14 +1,36 @@
-Landing page for the vault app
+# Landing page for the vault app
 
-Deployed using the `deploy.sh` script
+## AWS Amplify Redirects
 
-Everything in `/dist/` gets deployed to the website. The zero-byte `/dist/index.html` file lets us setup an object 
-redirect in S3: https://docs.aws.amazon.com/AmazonS3/latest/userguide/how-to-page-redirect.html
+AWS assumes that files without an extension are folders, so appends a `/` to the end. This means requests for `/.well-known/apple-app-site-association` end up going to `/.well-known/apple-app-site-association/` which is wrong. 
 
-# NOTE
+We fix this by renaming the `apple-app-site-association` to `apple-app-site-association.json` and the creating a rewrite rule to rename it. 
 
-We have *manually* deployed a copy of `/request/index.html` to S3 as `/request` served with Content-Type:text/html, and with paths in that file corrected to refer to objects inside the `/request` subdirectory.
+Additionally, we want `/request?param=123` and `connection-success?param=123` to be both served by the index file. We use rewrites for that too. 
 
-This is because HTTP(S) requests to https://vault.verida.io/request?parameter=value get redirected to https://vault.verida.io/request/ without this. This is _sort of_ documented at https://github.com/jariz/gatsby-plugin-s3/issues/51#issuecomment-480112920 and https://docs.aws.amazon.com/AmazonS3/latest/userguide/IndexDocumentSupport.html
 
-At the moment the `deploy.sh` script doesn't do this
+Paste this into the AWS Redirect Console (switch to "Text Editor" for access to the JSON):
+
+```
+[
+    {
+        "source": "</\\/request.*/>",
+        "target": "/index.html",
+        "status": "200",
+        "condition": null
+    },
+    {
+        "source": "</\\/connection-success.*/>",
+        "target": "/index.html",
+        "status": "200",
+        "condition": null
+    },
+    {
+        "source": "/.well-known/apple-app-site-association",
+        "target": "/.well-known/apple-app-site-association.json",
+        "status": "200",
+        "condition": null
+    }    
+]
+```
+
