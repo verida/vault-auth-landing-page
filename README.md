@@ -2,7 +2,7 @@
 
 ## Deployment
 
-This is deployed to AWS Amplify on merge to `main`
+This is deployed to AWS Amplify on merge to `main`. You can run `deploy.sh` to do this merge.
 
 ## AWS Amplify Redirects
 

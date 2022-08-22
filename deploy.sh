@@ -1,18 +1,10 @@
-# To use this you will need to set an named AWS profile.
-# Docs are at https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html
-#
-# Something like this works 
-#   export AWS_PROFILE=verida-prod
-#
-
-# if [[ -z "$AWS_PROFILE" ]]; then
-#     echo "You need to set AWS_PROFILE to use this script" 1>&2
-#     exit 1
-# fi
-
-
-# # This copys from the build directory to S3
-# aws s3 sync dist s3://vault.verida.io --delete
-
-# # And now we invalidate the cached cloudfront distribution so changes are available
-# aws cloudfront create-invalidation --distribution-id E1KP9K5UXG538C  --paths "/*"
+# Do this EXACTLY. 
+# If you do "smart" things like adding messages to the merge, main branch ends up ahead of develop
+# This is because a comment forces a merge commmit, and we just want to fast-foward. 
+# See "MERGING TAG" under https://git-scm.com/docs/git-merge
+git checkout develop
+git pull
+git checkout main
+git pull
+git merge develop --ff-only 
+git push
