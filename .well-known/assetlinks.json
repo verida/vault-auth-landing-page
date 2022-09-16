@@ -2,7 +2,7 @@
   "relation": ["delegate_permission/common.handle_all_urls"],
   "target": {
     "namespace": "android_app",
-    "package_name": "expo.test",
+    "package_name": "io.verida.vault",
     "sha256_cert_fingerprints":
     ["BC:8A:97:27:B2:F9:A2:9F:94:19:D4:DE:94:56:1D:A1:7F:D4:10:58:62:3F:E9:01:06:07:EE:B8:05:77:4D:AA"]
   }
