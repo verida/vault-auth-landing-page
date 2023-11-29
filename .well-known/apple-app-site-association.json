@@ -4,7 +4,8 @@
       {
         "appIDs": [
           "VV5KCZVD2D.io.verida.vault",
-          "VV5KCZVD2D.io.verida.vault.internal"
+          "VV5KCZVD2D.io.verida.vault.internal",
+          "VV5KCZVD2D.io.verida.vault.dev"
         ],
         "components": [
           {
